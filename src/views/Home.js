@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 function Home() {
 
-  const [userInput, setUserInput] = useState('');
-
   return (
     <div>
 
