@@ -1,11 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-$header-font: "Space Mono";
+// FONTS
+$font-header: "Space Mono";
+$font-main: "Poppins";
+
+// COLORS
+// Text Colors
+$header-primary: #FFD700;
+$header-secondary: #FF7597;
+$text-primary: #BB86FC;
+$text-secondary: #03DAC5;
 
 
-.h1 {
-  font-family: $header-font;
-  color: #FFD700;
-  text-align: center;
+
+
+// Main app styling
+.app {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-main;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  h1 {
+    font-family: $font-header;
+    color: $header-primary;
+    text-align: center;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $text-primary;
+}
+
+.footer_icons {
+  color: $header-primary;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.clickable_icon {
+  // padding: 1rem;
+  color: $header-primary;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.home {
+  margin: 0 5%;
+  color: $text-primary;
+  h3 {
+    color: $header-secondary;
+  }
+}

@@ -3,9 +3,10 @@
 function Home() {
 
   return (
-    <div>
-
-      <h1 className="h1">Lucas Knezevich</h1>
+    <div className="home">
+      
+      <h3>Hello!</h3>
+      <p>More to come, some links down in the footer!</p>
 
     </div>
   )
