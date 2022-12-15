@@ -9,6 +9,7 @@ import {
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './views/Home';
+import Wings from './views/Wings';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/'  element={ <Home /> }/>
+        <Route path='/wings' element={ <Wings /> }/>
       </Routes>
       <Footer />
     </Router>

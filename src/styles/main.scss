@@ -73,3 +73,25 @@ $text-secondary: #03DAC5;
   width: 100rem;
   height: 100rem;
 }
+
+.wings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    form {
+      margin: 2rem 0;
+    }
+    input {
+      background-color: white;
+      border: none;
+      width: 40rem;
+      height: 2rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      color: #FF7597;
+      font-size: 4rem;
+    }
+}
