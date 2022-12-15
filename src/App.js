@@ -17,8 +17,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path='/'  element={ <Home /> }/>
-        <Route path='/wings' element={ <Wings /> }/>
+        <Route exact path='/'  element={ <Home /> }/>
+        <Route exact path='/wings' element={ <Wings /> }/>
       </Routes>
       <Footer />
     </Router>
