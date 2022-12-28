@@ -1,25 +1,14 @@
-import { useEffect } from "react";
 import { useState } from "react";
+import SignUp from "../components/auth/SignUp";
 
 
 const Wings = () => {
 
   const [inputText, setInputText] = useState('');
 
-  useEffect(() => {
-    
-  });
-
   return (
     <div className="wings">
-      <form action="" className="wings_form">
-        <input 
-          type="text"
-          className="wings_input"
-          onChange={text => setInputText(text.target.value)}
-        />
-      </form>
-      <p className="input_text">{inputText}</p>
+      <SignUp />
     </div>
   )
 }

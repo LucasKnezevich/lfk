@@ -13,6 +13,8 @@ $text-primary: #BB86FC;
 $text-secondary: #03DAC5;
 $background-dark-primary: #1f1e21;
 
+$btn-background: #24a0ed;
+
 
 
 
@@ -78,6 +80,8 @@ $background-dark-primary: #1f1e21;
   height: 100rem;
 }
 
+
+// WINGS
 .wings {
   display: flex;
   flex-direction: column;
@@ -105,7 +109,51 @@ $background-dark-primary: #1f1e21;
   color: $text-primary;
 }
 
-.input_text{
+.input_text {
   margin: 10rem 8rem;
   overflow: hidden;
+}
+
+//SIGN UP
+.signup {
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 2rem;
+  }
+}
+
+.signup_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  label {
+    color: $text-primary;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+.create_account_btn {
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: $btn-background;
+  color: white;
+  padding: 1rem;
+  width: fit-content;
+  justify-self: center;
+  align-self: center;
+  :hover {
+    cursor: grab/pointer;
+    background-color: black;
+  }
 }
