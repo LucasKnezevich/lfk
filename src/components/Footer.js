@@ -1,4 +1,5 @@
 import { GitHub, Linkedin, Mail } from "react-feather";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 
@@ -15,7 +16,9 @@ const Footer = () => {
           <Mail className="clickable_icon"/>
         </a>
       </div>
-      <p>&copy; Lucas Knezevich &nbsp;|&nbsp; 2023</p>
+      <p>&copy; Lucas Knezevich &nbsp;|&nbsp; 
+        <Link to='/wings' className="wings_link">2023</Link>
+      </p>
 
     </div>
   )
