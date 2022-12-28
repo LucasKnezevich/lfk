@@ -19,7 +19,7 @@ const Wings = () => {
           onChange={text => setInputText(text.target.value)}
         />
       </form>
-      <p>{inputText}</p>
+      <p className="input_text">{inputText}</p>
     </div>
   )
 }
