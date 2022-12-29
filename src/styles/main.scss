@@ -83,25 +83,7 @@ $btn-background: #24a0ed;
 
 // WINGS
 .wings {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-    form {
-      margin: 2rem 0;
-    }
-    input {
-      background-color: white;
-      border: none;
-      width: 40rem;
-      height: 2rem;
-      font-size: 2rem;
-      text-align: center;
-    }
-    p {
-      color: #FF7597;
-      font-size: 4rem;
-    }
+  
 }
 
 .wings_link {
@@ -114,7 +96,7 @@ $btn-background: #24a0ed;
   overflow: hidden;
 }
 
-//SIGN UP
+// FORM - Specific
 .signup {
   display: flex;
   flex-direction: column;
@@ -123,15 +105,25 @@ $btn-background: #24a0ed;
   }
 }
 
-.signup_form {
+.login {
   display: flex;
   flex-direction: column;
+  p {
+    font-size: 2rem;
+  }
+}
+
+// FORM - Generic
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
 }
 
 .input_section {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  margin: 2rem;
   label {
     color: $text-primary;
     font-size: 1.5rem;
@@ -139,16 +131,19 @@ $btn-background: #24a0ed;
   }
   input {
     width: 100%;
+    height: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
   }
 }
 
-.create_account_btn {
+.form_submit_btn {
   font-size: 1.5rem;
   border-radius: 2rem;
   border-style: none;
   background-color: $btn-background;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: fit-content;
   justify-self: center;
   align-self: center;
@@ -156,4 +151,15 @@ $btn-background: #24a0ed;
     cursor: grab/pointer;
     background-color: black;
   }
+}
+
+.link_primary {
+  font-size: 2rem;
+  color: $text-primary;
+  text-align: center;
+}
+.question_primary {
+  font-size: 2rem;
+  text-align: center;
+  color: $header-secondary
 }

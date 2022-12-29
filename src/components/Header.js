@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <div className="header">
-      <h1>Lucas Knezevich</h1>
+      <h1><Link to='/'>Lucas Knezevich</Link></h1>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SignUp from "../components/auth/SignUp";
+import LogIn from "../components/auth/LogIn";
 
 
 const Wings = () => {
@@ -8,7 +8,7 @@ const Wings = () => {
 
   return (
     <div className="wings">
-      <SignUp />
+      <LogIn />
     </div>
   )
 }

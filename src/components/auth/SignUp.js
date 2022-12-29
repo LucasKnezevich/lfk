@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 
 export default function SignUp() {
@@ -19,10 +20,11 @@ export default function SignUp() {
   return (
     <div className="signup">
 
-      <form action="" className="signup_form">
+      <form action="" className="signup_form form">
         <div className="input_section">
           <label for="email">Email</label>
           <input
+            className="input"
             type="email"
             name="email"
             id=""
@@ -33,6 +35,7 @@ export default function SignUp() {
         <div className="input_section">
           <label for="password1">Password</label>
           <input 
+            className="input"
             type="password" 
             name="password1" 
             id=""
@@ -43,17 +46,19 @@ export default function SignUp() {
         <div className="input_section">  
           <label for="password2">Confirm Password</label>
           <input
+            className="input"
             type="password"
             name="password2"
             onChange={input => setPassword2(input.target.value)}
           />
         </div>
 
-        <button className="create_account_btn" onClick={validateAccountCreation}>Create Account</button>
+        <button className="form_submit_btn" onClick={validateAccountCreation}>Create Account</button>
 
       </form>
 
-      <p className="SignIn_Link">Already have an account?  Log in</p>
+      <p className="question_primary">Already have an account?</p>
+      <Link to='/wings' className="link_primary">Log In</Link>
       <p>{email}</p>
 
     </div>
