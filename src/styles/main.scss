@@ -5,12 +5,14 @@
 $font-header: "Space Mono";
 $font-main: "Poppins";
 
+
 // COLORS
 // Text Colors
 $header-primary: #FFD700;
 $header-secondary: #FF7597;
 $text-primary: #BB86FC;
 $text-secondary: #03DAC5;
+$text-warning: #dc3545;
 $background-dark-primary: #1f1e21;
 
 $btn-background: #24a0ed;
@@ -25,14 +27,21 @@ $btn-background: #24a0ed;
   font-family: $font-main;
 }
 
+.view_content {
+  margin-bottom: 10rem;
+}
+
 .header {
   display: flex;
   justify-content: center;
-  h1 {
-    font-family: $font-header;
+  padding: 1.5rem;
+  .home_link {
+    text-decoration: none;
     color: $header-primary;
+    font-family: $font-header;
     text-align: center;
     font-size: 3rem;
+
   }
 }
 
@@ -83,7 +92,7 @@ $btn-background: #24a0ed;
 
 // WINGS
 .wings {
-  
+
 }
 
 .wings_link {
@@ -124,16 +133,29 @@ $btn-background: #24a0ed;
   display: flex;
   flex-direction: column;
   margin: 2rem;
-  label {
-    color: $text-primary;
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
-  }
   input {
     width: 100%;
     height: 2rem;
     font-size: 1.5rem;
     width: 100%;
+  }
+  
+}
+
+.input_label_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  label {
+    color: $text-primary;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .input_warning_message {
+    font-size: 1rem;
+    color: $text-warning;
+    font-weight: 200;
   }
 }
 

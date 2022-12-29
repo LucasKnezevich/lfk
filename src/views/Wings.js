@@ -7,7 +7,7 @@ const Wings = () => {
   const [inputText, setInputText] = useState('');
 
   return (
-    <div className="wings">
+    <div className="wings view_content">
       <LogIn />
     </div>
   )

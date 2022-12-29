@@ -1,27 +1,70 @@
+import { useEffect } from "react";
 import { useState } from "react"
 import { Link } from "react-router-dom";
 
 
 export default function LogIn() {
   const [email, setEmail] = useState('');
-  const [password1, setPassword1] = useState('');
+  const [password, setPassword] = useState('');
 
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
 
-  function validateAccountCreation() {
-    if (isFormValid) {
+  const [emailMessage, setEmailMessage] = useState('');
 
+  // RegEx for email and password
+  const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+
+  useEffect(() => {
+
+    // Email
+    if (email.length === 0) {
+      setEmailMessage('');
+      setIsEmailValid(false);
+    } else if (email.length != 0 && !email.match(emailRegEx)) {
+      setEmailMessage('Please enter a valid email.');
+      setIsEmailValid(false);
+    } else if (email.match(emailRegEx)) {
+      setEmailMessage('');
+      setIsEmailValid(true);
+    }
+
+    // Password
+    if (password.length <= 0) {
+      setIsPasswordValid(false);
+    } else {
+      setIsPasswordValid(true);
+    }
+
+    // Form
+    if (isEmailValid && isPasswordValid) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+
+  })
+
+  function validateLogIn() {
+    if (isFormValid) {
+      alert('Success')
     } else {
       alert("Form not valid.")
     }
   }
 
   return (
-    <div className="login">
+    <div className="login view_content">
 
       <form action="" className="login_form form">
         <div className="input_section">
-          <label for="email">Email</label>
+          
+          <div className="input_label_section">
+            <label for="email">Email</label>
+            <p className="input_warning_message">{emailMessage}</p>
+          </div>
+
           <input
             className="input"
             type="email"
@@ -38,11 +81,11 @@ export default function LogIn() {
             type="password" 
             name="password" 
             id=""
-            onChange={input => setPassword1(input.target.value)}
+            onChange={input => setPassword(input.target.value)}
           />
         </div>
 
-        <button className="form_submit_btn" onClick={validateAccountCreation}>Log In</button>
+        <button className="form_submit_btn" onClick={validateLogIn}>Log In</button>
 
       </form>
 
