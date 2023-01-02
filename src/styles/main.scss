@@ -187,3 +187,15 @@ $btn-background: #24a0ed;
   text-align: center;
   color: $header-secondary
 }
+
+
+@media screen and (min-width: 790px) {
+  .form {
+    width: 40rem;
+  }
+
+  .login, .signup {
+    justify-content: center;
+    align-items: center;
+  }
+}
