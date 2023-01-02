@@ -59,7 +59,6 @@ export default function LogIn() {
 
       <form action="" className="login_form form">
         <div className="input_section">
-          
           <div className="input_label_section">
             <label for="email">Email</label>
             <p className="input_warning_message">{emailMessage}</p>
@@ -75,7 +74,10 @@ export default function LogIn() {
         </div>
 
         <div className="input_section">
-          <label for="password1">Password</label>
+          <div className="input_label_section">
+            <label for="password1">Password</label>
+          </div>
+          
           <input 
             className="input"
             type="password" 
