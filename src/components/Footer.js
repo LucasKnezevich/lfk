@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
       </div>
       <p>&copy; Lucas Knezevich &nbsp;|&nbsp; 
-        <Link to='/wings' className="wings_link">2023</Link>
+        <Link to='/wings' className="wings_link">2024</Link>
       </p>
 
     </div>
