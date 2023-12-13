@@ -48,7 +48,7 @@ export default function LogIn() {
 
   function validateLogIn() {
     if (isFormValid) {
-      alert('Success')
+      alert('Invalid credentials.')
     } else {
       alert("Form not valid.")
     }
@@ -91,8 +91,8 @@ export default function LogIn() {
 
       </form>
 
-      <p className="question_primary">Don't have an account?</p>
-      <Link to='/wings/signup' className="link_primary">Sign Up</Link>
+      {/* <p className="question_primary">Don't have an account?</p>
+      <Link to='/wings/signup' className="link_primary">Sign Up</Link> */}
 
     </div>
   )
