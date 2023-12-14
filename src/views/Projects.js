@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { GitHubRepo } from "../components/GitHubRepo";
+import React, { useEffect, useState } from 'react'
+import { GitHubRepo } from '../components/GitHubRepo'
 
 const Projects = () => {
-  const [gitHubRepos, setGitHubRepos] = useState([]);
+  const [gitHubRepos, setGitHubRepos] = useState([])
 
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/LucasKnezevich/repos');
+        const response = await fetch('https://api.github.com/users/LucasKnezevich/repos')
         if (!response.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error('Failed to fetch data')
         }
-        const data = await response.json();
-        setGitHubRepos(data);
+        const data = await response.json()
+        setGitHubRepos(data)
       } catch (error) {
-        console.error('Error fetching data: ', error);
+        console.error('Error fetching data: ', error)
       }
-    };
+    }
 
-    fetchRepos();
-  }, []);
+    fetchRepos()
+  }, [])
 
   return (
     <div className="view-content">
@@ -28,7 +28,8 @@ const Projects = () => {
         <h3 className="title-text">GitHub</h3>
         <div className="gh-repo-container">
           {gitHubRepos.map(repo => (
-            <GitHubRepo 
+            <GitHubRepo
+              key={repo.id}
               name={repo.name}
               description={repo.description}
               url={repo.html_url}
@@ -40,4 +41,4 @@ const Projects = () => {
   )
 }
 
-export default Projects;
+export default Projects
