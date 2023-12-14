@@ -17,22 +17,157 @@ $background-dark-primary: #1f1e21;
 
 $btn-background: #24a0ed;
 $white: #ffffff;
+$black: #000000;
+
+:root {
+  /* Black */
+  --black-1: #000000;
+  --black-2: #1a1a1a;
+  --black-3: #333333;
+  --black-4: #4d4d4d;
+  --black-5: #666666;
+  --black-6: #808080;
+  --black-7: #999999;
+  --black-8: #b3b3b3;
+  --black-9: #cccccc;
+  --black-10: #e6e6e6;
+
+  /* White */
+  --white-1: #ffffff;
+  --white-2: #f0f0f0;
+  --white-3: #e0e0e0;
+  --white-4: #d1d1d1;
+  --white-5: #c2c2c2;
+  --white-6: #b3b3b3;
+  --white-7: #a3a3a3;
+  --white-8: #949494;
+  --white-9: #858585;
+  --white-10: #767676;
+
+  /* Yellow */
+  --yellow-1: #ffff00;
+  --yellow-2: #ffea00;
+  --yellow-3: #ffd500;
+  --yellow-4: #ffc000;
+  --yellow-5: #ffab00;
+  --yellow-6: #ff9600;
+  --yellow-7: #ff8100;
+  --yellow-8: #ff6c00;
+  --yellow-9: #ff5700;
+  --yellow-10: #ff4200;
+
+  /* Red */
+  --red-1: #ff0000;
+  --red-2: #e60000;
+  --red-3: #cc0000;
+  --red-4: #b30000;
+  --red-5: #990000;
+  --red-6: #800000;
+  --red-7: #660000;
+  --red-8: #4d0000;
+  --red-9: #330000;
+  --red-10: #1a0000;
+
+  /* Blue */
+  --blue-1: #0000ff;
+  --blue-2: #0000e6;
+  --blue-3: #0000cc;
+  --blue-4: #0000b3;
+  --blue-5: #000099;
+  --blue-6: #000080;
+  --blue-7: #000066;
+  --blue-8: #00004d;
+  --blue-9: #000033;
+  --blue-10: #00001a;
+
+  /* Purple */
+  --purple-1: #800080;
+  --purple-2: #730073;
+  --purple-3: #660066;
+  --purple-4: #590059;
+  --purple-5: #4d004d;
+  --purple-6: #400040;
+  --purple-7: #330033;
+  --purple-8: #260026;
+  --purple-9: #1a001a;
+  --purple-10: #0d000d;
+
+  /* Green */
+  --green-1: #008000;
+  --green-2: #007300;
+  --green-3: #006600;
+  --green-4: #005900;
+  --green-5: #004d00;
+  --green-6: #004000;
+  --green-7: #003300;
+  --green-8: #002600;
+  --green-9: #001a00;
+  --green-10: #000d00;
+
+  /* Pink */
+  --pink-1: #ffc0cb;
+  --pink-2: #ffb3c1;
+  --pink-3: #ffa6b8;
+  --pink-4: #ff99ae;
+  --pink-5: #ff8ca5;
+  --pink-6: #ff7f9c;
+  --pink-7: #ff7292;
+  --pink-8: #ff6589;
+  --pink-9: #ff5880;
+  --pink-10: #ff4c76;
+
+  /* Gold */
+  --gold-1: #ffd700;
+  --gold-2: #ffcc00;
+  --gold-3: #ffc200;
+  --gold-4: #ffb800;
+  --gold-5: #ffae00;
+  --gold-6: #ffa400;
+  --gold-7: #ff9900;
+  --gold-8: #ff8f00;
+  --gold-9: #ff8500;
+  --gold-10: #ff7b00;
+}
 
 
 // Main app styling
 body {
   // Variables
+  --bg: var(--white-1);
   --header-text-color: #9d4dff;
+  --title-text-color: #a5009a;
+  --text-color: #FF7597;
+  --link-color: #03DAC5;
+  --link-background-color: #1f1e21;
+  --dropdown-color: black;
+  --dropdown-link-bg: white;
+  --gh-card-bg: var(--white-3);
+  --gh-card-hover-bg: var(--white-4);
+  --gh-dropdown-bg: var(--white-2);
+  --gh-card-title: var(--black-3);
+  --gh-card-text: var(--blue-6);
 
   // Properties
-  background-color: $white;
+  background-color: var(--white-1);
 }
 body.dark {
   // Variables
+  --bg: #1f1e21;
   --header-text-color: #FFD700;
+  --title-text-color: #FF7597;
+  --text-color: #FF7597;
+  --link-color: #03DAC5;
+  --link-background-color: #46444a;
+  --dropdown-color: white;
+  --dropdown-link-bg: #1f1e21;
+  --gh-card-bg: var(--black-3);
+  --gh-card-hover-bg: var(--black-4);
+  --gh-dropdown-bg: var(--black-2);
+  --gh-card-title: var(--white-3);
+  --gh-card-text: var(--white-1);
   
   // Properties
-  background-color: $background-dark-primary;
+  background-color: var(--bg)
 }
 
 .app {
@@ -41,8 +176,14 @@ body.dark {
   font-family: $font-main;
 }
 
-.view_content {
+.view-content {
+  padding: 0 1rem;
   margin-bottom: 10rem;
+  color: var(--title-text-color);
+}
+
+.title-text {
+  text-align: center;
 }
 
 .header-title {
@@ -59,6 +200,47 @@ body.dark {
   }
 }
 
+.navbar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu-icon {
+  color: var(--dropdown-color);
+  height: 42px;
+  width: 42px;
+}
+
+.nav-menu-icon:hover {
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dropdown-link-bg);
+  border-radius: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  color: var(--link-color);
+  padding: 4px 12px;
+}
+
+.nav-link:hover {
+  background-color: var(--link-background-color);
+  border-radius: 5px;
+}
+
+.navbar-header {
+  display: fixed;
+  top: 0;
+}
+
 .footer {
   position: fixed;
   left: 0;
@@ -71,7 +253,7 @@ body.dark {
   align-items: center;
   text-align: center;
   color: $text-primary;
-  // background-color: $background-dark-primary;
+  background-color: var(--bg);
 }
 
 .footer_icons {
@@ -179,6 +361,69 @@ body.dark {
 }
 
 
+
+// PROJECTS
+.github > h3 {
+  text-align: start;
+}
+
+.gh-repo-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  
+}
+
+.repo-link {
+  text-decoration: none;
+}
+
+.gh-repo {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gh-card-bg);
+  // padding: 1px 6px;
+  padding-top: 0;
+  border-radius: 5px;
+  height: min-content;
+}
+
+.gh-repo:hover {
+
+}
+
+.gh-dropdown-icon {
+  color: var(--text-color);
+  background-color: var(--gh-dropdown-bg);
+  height: 30px;
+  width: auto;
+}
+
+.gh-dropdown-icon:hover {
+  cursor: pointer;
+}
+
+.gh-repo-link {
+  text-decoration: none;
+  text-align: center;
+}
+
+.gh-repo-link:hover {
+  background-color: var(--gh-card-hover-bg);
+}
+
+.gh-repo-link > h1 {
+  color: var(--gh-card-title);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.gh-repo-link > p {
+  color: var(--gh-card-text);
+  font-size: 20px;
+}
+
+
 // WINGS
 .wings {
 
@@ -281,6 +526,17 @@ body.dark {
 @media screen and (min-width: 790px) {
   .header-title {
     padding: 1.5rem;
+  }
+
+  .view-content {
+    padding: 0 1rem;
+    margin-bottom: 10rem;
+    color: var(--title-text-color);
+  }
+
+  .gh-repo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   // Login & Signup Screens
