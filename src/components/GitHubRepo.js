@@ -1,32 +1,39 @@
-import { useState } from "react";
-import { ChevronUp, ChevronDown } from "react-feather";
+import { React, useState } from 'react'
+import { ChevronUp, ChevronDown } from 'react-feather'
 
+// eslint-disable-next-line react/prop-types
 export const GitHubRepo = ({ name, description, url }) => {
-  const [showDescription, setShowDescription] = useState(false);
+  const [showDescription, setShowDescription] = useState(false)
 
   return (
     <div className="gh-repo">
       <a href={url} target="blank" className="gh-repo-link">
         <h1>{name}</h1>
-        {showDescription ? (
-          description ? (
+        {showDescription
+          ? (
+              description
+                ? (
             <p>{description}</p>
-          ) : (
+                  )
+                : (
             <p><i>No repo description available.</i></p>
-          )
-        ) : null}
+                  )
+            )
+          : null}
       </a>
-      {showDescription ? (
+      {showDescription
+        ? (
         <ChevronUp
           className="gh-dropdown-icon"
           onClick={() => setShowDescription(!showDescription)}
         />
-      ) : (
+          )
+        : (
         <ChevronDown
           className="gh-dropdown-icon"
           onClick={() => setShowDescription(!showDescription)}
         />
-      )}
+          )}
     </div>
-  );
-};
+  )
+}

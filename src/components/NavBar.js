@@ -1,27 +1,26 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "react-feather";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X } from 'react-feather'
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div className="navbar">
       {isOpen
         ? (
-            <X 
+            <X
               className="nav-menu-icon"
               onClick={() => setIsOpen(!isOpen)}
             />
           )
-        :
-         (
+        : (
             <Menu
               className="nav-menu-icon"
               onClick={() => setIsOpen(!isOpen)}
             />
-         )
-        
+          )
+
       }
       {isOpen
         ? (
@@ -40,4 +39,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar;
+export default NavBar

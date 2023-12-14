@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { Sun, Moon } from "react-feather";
+import React, { useEffect, useState } from 'react'
+import { Sun, Moon } from 'react-feather'
 
 export const ThemeToggle = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(true)
 
   const handleToggle = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
+    setIsDarkTheme(!isDarkTheme)
+  }
 
   useEffect(() => {
     if (isDarkTheme) {
-      document.body.classList.add('dark');
+      document.body.classList.add('dark')
     } else {
-      document.body.classList.remove('dark');
+      document.body.classList.remove('dark')
     }
-  }, [isDarkTheme]);
+  }, [isDarkTheme])
 
   return (
     <div className="theme-toggle-switch">
@@ -30,5 +30,5 @@ export const ThemeToggle = () => {
         {/* <span className="theme-slider" /> */}
       </label>
     </div>
-  );
-};
+  )
+}

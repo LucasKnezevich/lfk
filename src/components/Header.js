@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-import { ThemeToggle } from "./ThemeToggle";
-import NavBar from "./NavBar";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { ThemeToggle } from './ThemeToggle'
+import NavBar from './NavBar'
 
 const Header = () => {
   return (
@@ -14,4 +15,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Header

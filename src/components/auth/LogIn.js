@@ -1,56 +1,52 @@
-import { useEffect } from "react";
-import { useState } from "react"
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
 
+export default function LogIn () {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-export default function LogIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [isEmailValid, setIsEmailValid] = useState(false)
+  const [isPasswordValid, setIsPasswordValid] = useState(false)
+  const [isFormValid, setIsFormValid] = useState(false)
 
-  const [isEmailValid, setIsEmailValid] = useState(false);
-  const [isPasswordValid, setIsPasswordValid] = useState(false);
-  const [isFormValid, setIsFormValid] = useState(false);
-
-  const [emailMessage, setEmailMessage] = useState('');
+  const [emailMessage, setEmailMessage] = useState('')
 
   // RegEx for email and password
-  const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+  // eslint-disable-next-line no-useless-escape
+  const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
 
   useEffect(() => {
-
     // Email
     if (email.length === 0) {
-      setEmailMessage('');
-      setIsEmailValid(false);
-    } else if (email.length != 0 && !email.match(emailRegEx)) {
-      setEmailMessage('Please enter a valid email.');
-      setIsEmailValid(false);
+      setEmailMessage('')
+      setIsEmailValid(false)
+    } else if (email.length !== 0 && !email.match(emailRegEx)) {
+      setEmailMessage('Please enter a valid email.')
+      setIsEmailValid(false)
     } else if (email.match(emailRegEx)) {
-      setEmailMessage('');
-      setIsEmailValid(true);
+      setEmailMessage('')
+      setIsEmailValid(true)
     }
 
     // Password
     if (password.length <= 0) {
-      setIsPasswordValid(false);
+      setIsPasswordValid(false)
     } else {
-      setIsPasswordValid(true);
+      setIsPasswordValid(true)
     }
 
     // Form
     if (isEmailValid && isPasswordValid) {
-      setIsFormValid(true);
+      setIsFormValid(true)
     } else {
-      setIsFormValid(false);
+      setIsFormValid(false)
     }
-
   })
 
-  function validateLogIn() {
+  function validateLogIn () {
     if (isFormValid) {
       alert('Invalid credentials.')
     } else {
-      alert("Form not valid.")
+      alert('Form not valid.')
     }
   }
 
@@ -60,7 +56,7 @@ export default function LogIn() {
       <form action="" className="login_form form">
         <div className="input_section">
           <div className="input_label_section">
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <p className="input_warning_message">{emailMessage}</p>
           </div>
 
@@ -75,13 +71,13 @@ export default function LogIn() {
 
         <div className="input_section">
           <div className="input_label_section">
-            <label for="password1">Password</label>
+            <label htmlFor="password1">Password</label>
           </div>
-          
-          <input 
+
+          <input
             className="input"
-            type="password" 
-            name="password" 
+            type="password"
+            name="password"
             id=""
             onChange={input => setPassword(input.target.value)}
           />

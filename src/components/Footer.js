@@ -1,8 +1,8 @@
-import { GitHub, Linkedin, Mail } from "react-feather";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { GitHub, Linkedin, Mail } from 'react-feather'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
-
   return (
     <div className="footer">
       <div className="footer_icons">
@@ -16,7 +16,7 @@ const Footer = () => {
           <Mail className="clickable_icon"/>
         </a>
       </div>
-      <p>&copy; Lucas Knezevich &nbsp;|&nbsp;&nbsp; 
+      <p>&copy; Lucas Knezevich &nbsp;|&nbsp;&nbsp;
         <Link to='/wings' className="wings_link">2024</Link>
       </p>
 
@@ -24,4 +24,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer
