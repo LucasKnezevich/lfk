@@ -3,7 +3,7 @@
 function Home() {
 
   return (
-    <div className="home view_content">
+    <div className="home view-content">
       
     </div>
   )
