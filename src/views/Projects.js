@@ -48,7 +48,7 @@ const Projects = () => {
               key={domain.id}
               name={domain.name}
               description={domain.description}
-              url={domain.url}
+              url={domain.url} 
             />
           ))}
         </div>
