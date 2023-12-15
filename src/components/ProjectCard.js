@@ -2,12 +2,12 @@ import { React, useState } from 'react'
 import { ChevronUp, ChevronDown } from 'react-feather'
 
 // eslint-disable-next-line react/prop-types
-export const GitHubRepo = ({ name, description, url }) => {
+export const ProjectCard = ({ name, description, url }) => {
   const [showDescription, setShowDescription] = useState(false)
 
   return (
-    <div className="gh-repo">
-      <a href={url} target="blank" className="gh-repo-link">
+    <div className="project-card">
+      <a href={url} target="blank" className="project-link">
         <h1>{name}</h1>
         {showDescription
           ? (
@@ -24,13 +24,13 @@ export const GitHubRepo = ({ name, description, url }) => {
       {showDescription
         ? (
         <ChevronUp
-          className="gh-dropdown-icon"
+          className="project-dropdown-icon"
           onClick={() => setShowDescription(!showDescription)}
         />
           )
         : (
         <ChevronDown
-          className="gh-dropdown-icon"
+          className="project-dropdown-icon"
           onClick={() => setShowDescription(!showDescription)}
         />
           )}

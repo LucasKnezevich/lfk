@@ -363,11 +363,11 @@ body.dark {
 
 
 // PROJECTS
-.github > h3 {
+.project-section-container > h2 {
   text-align: start;
 }
 
-.gh-repo-container {
+.project-card-container {
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -378,7 +378,7 @@ body.dark {
   text-decoration: none;
 }
 
-.gh-repo {
+.project-card{
   display: flex;
   flex-direction: column;
   background-color: var(--gh-card-bg);
@@ -388,36 +388,37 @@ body.dark {
   height: min-content;
 }
 
-.gh-dropdown-icon {
+.project-dropdown-icon {
   color: var(--text-color);
   background-color: var(--gh-dropdown-bg);
   height: 30px;
   width: auto;
 }
 
-.gh-dropdown-icon:hover {
+.project-dropdown-icon:hover {
   cursor: pointer;
 }
 
-.gh-repo-link {
+.project-link {
   text-decoration: none;
   text-align: center;
 }
 
-.gh-repo-link:hover {
+.project-link:hover {
   background-color: var(--gh-card-hover-bg);
 }
 
-.gh-repo-link > h1 {
+.project-link > h1 {
   color: var(--gh-card-title);
   font-weight: bold;
   font-size: 24px;
 }
 
-.gh-repo-link > p {
+.project-link > p {
   color: var(--gh-card-text);
   font-size: 20px;
 }
+
 
 
 // WINGS
@@ -527,7 +528,7 @@ body.dark {
     color: var(--title-text-color);
   }
 
-  .gh-repo-container {
+  .project-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
