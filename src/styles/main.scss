@@ -20,6 +20,7 @@ $white: #ffffff;
 $black: #000000;
 
 :root {
+  /* COLOR VARIABLE */
   /* Black */
   --black-1: #000000;
   --black-2: #1a1a1a;
@@ -47,7 +48,7 @@ $black: #000000;
   /* Yellow */
   --yellow-1: #ffff00;
   --yellow-2: #ffea00;
-  --yellow-3: #ffd500;
+  --yellow-3: #ffd700;
   --yellow-4: #ffc000;
   --yellow-5: #ffab00;
   --yellow-6: #ff9600;
@@ -81,7 +82,7 @@ $black: #000000;
   --blue-10: #00001a;
 
   /* Purple */
-  --purple-1: #800080;
+  --purple-1: #bc08bc;
   --purple-2: #730073;
   --purple-3: #660066;
   --purple-4: #590059;
@@ -91,6 +92,7 @@ $black: #000000;
   --purple-8: #260026;
   --purple-9: #1a001a;
   --purple-10: #0d000d;
+  --purple-alt-1: #9d4dff;
 
   /* Green */
   --green-1: #008000;
@@ -127,44 +129,75 @@ $black: #000000;
   --gold-8: #ff8f00;
   --gold-9: #ff8500;
   --gold-10: #ff7b00;
+
+  /* Orange */
+  --orange-1: #FFF5E0;
+  --orange-2: #FFE0B2;
+  --orange-3: #FFD180;
+  --orange-4: #FFBB33;
+  --orange-5: #FFA726;
+  --orange-6: #FF9800;
+  --orange-7: #FB8C00;
+  --orange-8: #F57C00;
+  --orange-9: #EF6C00;
+  --orange-10: #E65100;
 }
 
 
 // Main app styling
 body {
-  // Variables
-  --bg: var(--white-1);
-  --header-text-color: #9d4dff;
-  --title-text-color: #a5009a;
-  --text-color: #FF7597;
+  // General Variables
+  // Color
+  --warning-text: var(--yellow-2);
+  --error-text: var(--red-2);
+  --success-text: var(--green-1);
+  --info-text: var(--blue-2);
   --link-color: #03DAC5;
-  --link-background-color: #1f1e21;
-  --dropdown-color: black;
-  --dropdown-link-bg: white;
-  --gh-card-bg: var(--white-3);
-  --gh-card-hover-bg: var(--white-4);
-  --gh-dropdown-bg: var(--white-2);
-  --gh-card-title: var(--black-3);
-  --gh-card-text: var(--blue-6);
+  --highlight-primary: var(--pink-7);
+
+  // Other
+  --border-radius: 5px;
+
+
+  // Light Mode Specific Variables
+  --bg: var(--white-1);
+  --header-text-primary: var(--purple-alt-1);
+  --header-text-secondary: var(--black-1);
+  --header-text-accent: var(--black-1);
+  --content-text-primary: var(--purple-7);
+  --content-text-secondary: var(--pink-7);
+  --content-text-accent: var(--black-1);
+  --dropdown-color: var(--black-1);
+  --dropdown-link-bg: var(--white-1);
+  --nav-link-hover-bg: var(--white-3);
+  --project-card-bg: var(--white-3);
+  --project-card-hover-bg: var(--white-4);
+  --project-card-dropdown-bg: var(--white-2);
+  --project-card-title: var(--black-1);
+  --project-card-text: var(--black-3);
+  --footer-icon: var(--purple-alt-1);
 
   // Properties
-  background-color: var(--white-1);
+  background-color: var(--bg);
 }
 body.dark {
-  // Variables
+  // Dark Mode Specific Variables
   --bg: #1f1e21;
-  --header-text-color: #FFD700;
-  --title-text-color: #FF7597;
-  --text-color: #FF7597;
-  --link-color: #03DAC5;
-  --link-background-color: #46444a;
-  --dropdown-color: white;
+  --header-text-primary: var(--gold-1);
+  --header-text-secondary: var(--pink-6);
+  --header-text-accent: var(--purple-alt-1);
+  --content-text-primary: var(--pink-7);
+  --content-text-secondary: var(--pink-7);
+  --content-text-accent: var(--white-1);
+  --dropdown-color: var(--white-1);
   --dropdown-link-bg: #1f1e21;
-  --gh-card-bg: var(--black-3);
-  --gh-card-hover-bg: var(--black-4);
-  --gh-dropdown-bg: var(--black-2);
-  --gh-card-title: var(--white-3);
-  --gh-card-text: var(--white-1);
+  --nav-link-hover-bg: var(--black-4);
+  --project-card-bg: var(--black-3);
+  --project-card-hover-bg: var(--black-4);
+  --project-card-dropdown-bg: var(--black-2);
+  --project-card-title: var(--white-1);
+  --project-card-text: var(--white-3);
+  --footer-icon: var(--gold-1);
   
   // Properties
   background-color: var(--bg)
@@ -176,23 +209,24 @@ body.dark {
   font-family: $font-main;
 }
 
+
+/* ******************************************************************** */
+
+// VIEW CONTAINER
 .view-content {
   padding: 0 1rem;
   margin-bottom: 10rem;
-  color: var(--title-text-color);
+  color: var(--header-text-secondary);
 }
 
-.title-text {
-  text-align: center;
-}
-
+// HEADER
 .header-title {
   display: flex;
   justify-content: center;
   // padding: 1.5rem;
   .home-link {
     text-decoration: none;
-    color: var(--header-text-color);
+    color: var(--header-text-primary);
     font-family: $font-header;
     text-align: center;
     font-size: 3rem;
@@ -200,6 +234,45 @@ body.dark {
   }
 }
 
+/* ~~ VIEWS ~~ */
+
+// HOME
+.home {
+  margin: 0 5%;
+  color: $text-primary;
+  h3 {
+    color: $header-primary-light;
+  }
+}
+
+.home_image {
+  color: black;
+  width: 100rem;
+  height: 100rem;
+}
+
+
+
+// PROJECTS
+.page-header {
+  color: var(--header-text-secondary);
+  text-align: left;
+}
+
+.project-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  
+}
+
+.project-section-container > h2 {
+  text-align: start;
+  color: var(--header-text-primary);
+}
+
+/* ~~ COMPONENTS ~~ */
+// NAVBAR
 .navbar {
   position: absolute;
   display: flex;
@@ -220,7 +293,7 @@ body.dark {
   display: flex;
   flex-direction: column;
   background-color: var(--dropdown-link-bg);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 
 .nav-link {
@@ -232,8 +305,8 @@ body.dark {
 }
 
 .nav-link:hover {
-  background-color: var(--link-background-color);
-  border-radius: 5px;
+  background-color: var(--nav-link-hover-bg);
+  border-radius: var(--border-radius);
 }
 
 .navbar-header {
@@ -241,6 +314,7 @@ body.dark {
   top: 0;
 }
 
+// FOOTER
 .footer {
   position: fixed;
   left: 0;
@@ -252,17 +326,30 @@ body.dark {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: $text-primary;
+  color: var(--header-text-accent);
   background-color: var(--bg);
 }
 
 .footer_icons {
-  color: $header-primary-dark;
   width: 50%;
   display: flex;
   justify-content: space-around;
 }
 
+.footer_icon {
+  // padding: 1rem;
+  color: var(--footer-icon);
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.footer_year {
+  text-decoration: none;
+  color: var(--header-text-accent);
+}
+
+// THEME TOGGLE
 .theme-label {
   position: fixed;
   top: 4px;
@@ -338,65 +425,27 @@ body.dark {
   right: 0;
 }
 
-.clickable_icon {
-  // padding: 1rem;
-  color: $header-primary-dark;
-  :hover {
-    cursor: pointer;
-  }
-}
 
-.home {
-  margin: 0 5%;
-  color: $text-primary;
-  h3 {
-    color: $header-primary-light;
-  }
-}
-
-.home_image {
-  color: black;
-  width: 100rem;
-  height: 100rem;
-}
-
-
-
-// PROJECTS
-.project-section-container > h2 {
-  text-align: start;
-}
-
-.project-card-container {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  
-}
-
-.repo-link {
-  text-decoration: none;
-}
-
+// PROJECT CARD
 .project-card{
   display: flex;
   flex-direction: column;
-  background-color: var(--gh-card-bg);
-  // padding: 1px 6px;
-  padding-top: 0;
-  border-radius: 5px;
+  background-color: var(--project-card-bg);
+  border-radius: var(--border-radius);
   height: min-content;
 }
 
 .project-dropdown-icon {
-  color: var(--text-color);
-  background-color: var(--gh-dropdown-bg);
+  color: var(--content-text-secondary);
+  background-color: var(--project-card-dropdown-bg);
   height: 30px;
   width: auto;
 }
 
 .project-dropdown-icon:hover {
   cursor: pointer;
+  border-radius: var(--border-radius);
+  background-color: var(--white-4);
 }
 
 .project-link {
@@ -405,29 +454,25 @@ body.dark {
 }
 
 .project-link:hover {
-  background-color: var(--gh-card-hover-bg);
+  background-color: var(--project-card-hover-bg);
+  border-radius: var(--border-radius);
 }
 
 .project-link > h1 {
-  color: var(--gh-card-title);
+  color: var(--project-card-title);
   font-weight: bold;
   font-size: 24px;
 }
 
 .project-link > p {
-  color: var(--gh-card-text);
+  color: var(--project-card-text);
   font-size: 20px;
+  padding: 0 6%;
 }
 
+/* ******************************************************************** */
 
-
-// WINGS
-
-.wings_link {
-  text-decoration: none;
-  color: $text-primary;
-}
-
+// WINGSs
 .input_text {
   margin: 10rem 8rem;
   overflow: hidden;
@@ -516,6 +561,8 @@ body.dark {
   color: $header-primary-light
 }
 
+
+/* ******************************************************************** */
 // Desktop Monitors
 @media screen and (min-width: 790px) {
   .header-title {
@@ -525,7 +572,7 @@ body.dark {
   .view-content {
     padding: 0 1rem;
     margin-bottom: 10rem;
-    color: var(--title-text-color);
+    color: var(--header-text-secondary);
   }
 
   .project-card-container {
