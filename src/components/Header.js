@@ -8,9 +8,9 @@ const Header = () => {
     <div className="header">
       <NavBar className="navbar-header"/>
       <div className="header-title">
-        <Link to='/' className="home-link">Lucas Knezevich</Link>
+        <Link to='/' className="home-title-link">Lucas Knezevich</Link>
       </div>
-      <ThemeToggle className="theme-toggle" />
+      <ThemeToggle className="header-theme-toggle" />
     </div>
   )
 }
