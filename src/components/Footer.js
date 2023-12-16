@@ -7,17 +7,17 @@ const Footer = () => {
     <div className="footer">
       <div className="footer_icons">
         <a href="https://www.linkedin.com/in/lucasknezevich/" target='_blank' rel="noreferrer">
-          <Linkedin className="clickable_icon" />
+          <Linkedin className="footer_icon" />
         </a>
         <a href="https://github.com/LucasKnezevich" target='blank' rel="noreferrer">
-          <GitHub className="clickable_icon"/>
+          <GitHub className="footer_icon"/>
         </a>
         <a href="mailto:knezevich.lucas@gmail.com">
-          <Mail className="clickable_icon"/>
+          <Mail className="footer_icon"/>
         </a>
       </div>
       <p>&copy; Lucas Knezevich &nbsp;|&nbsp;&nbsp;
-        <Link to='/wings' className="wings_link">2024</Link>
+        <Link to='/wings' className="footer_year">2024</Link>
       </p>
 
     </div>

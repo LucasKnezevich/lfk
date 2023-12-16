@@ -26,9 +26,9 @@ const Projects = () => {
 
   return (
     <div className="view-content">
-      <h1 className="title-text">Projects</h1>
+      <h1 className="page-header">Projects</h1>
       <div className="project-section-container">
-        <h2 className="title-text">GitHub</h2>
+        <h2>GitHub</h2>
         <div className="project-card-container">
           {gitHubRepos.map((repo) => (
             <ProjectCard
@@ -41,7 +41,7 @@ const Projects = () => {
         </div>
       </div>
       <div className="project-section-container">
-        <h2 className="title-text">Domains</h2>
+        <h2>Domains</h2>
         <div className="project-card-container">
           {domainData.map((domain) => (
             <ProjectCard
