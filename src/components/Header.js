@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ThemeToggle } from './ThemeToggle'
 import NavBar from './NavBar'
 
 const Header = () => {
@@ -10,7 +9,6 @@ const Header = () => {
       <div className="header-title">
         <Link to='/' className="home-title-link">Lucas Knezevich</Link>
       </div>
-      <ThemeToggle className="header-theme-toggle" />
     </div>
   )
 }
