@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,8 +6,8 @@ import {
 } from 'react-router-dom'
 
 // ROUTES
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Footer from './components/header_footer/Footer'
+import Header from './components/header_footer/Header'
 import Home from './views/Home'
 import Wings from './views/Wings'
 import SignUp from './components/auth/SignUp'
