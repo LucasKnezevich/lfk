@@ -70,7 +70,7 @@ $black: #000000;
   --red-10: #1a0000;
 
   /* Blue */
-  --blue-1: #0000ff;
+  --blue-1: #adadff;
   --blue-2: #0000e6;
   --blue-3: #0000cc;
   --blue-4: #0000b3;
@@ -177,6 +177,11 @@ body {
   --project-card-text: var(--white-3);
   --footer-icon: var(--gold-1);
   --bubble-shadow: var(--white-8);
+  --bubbleBorder-1: var(--blue-7);
+  --bubbleBorder-2: var(--purple-7);
+  --bubbleBorder-3: var(--gold-1);
+  --bubbleBorder-4: var(--purple-1);
+  --bubbleBorder-5: var(--white-1);
 
   // Properties
   background-color: var(--bg);
@@ -199,7 +204,12 @@ body.light {
   --project-card-title: var(--black-1);
   --project-card-text: var(--black-3);
   --footer-icon: var(--purple-alt-1);
-  --bubble-shadow: var(--white-2);
+  --bubble-shadow: rgba(0,0,0,.16);
+  --bubbleBorder-1: var(--pink-1);
+  --bubbleBorder-2: var(--purple-1);
+  --bubbleBorder-3: var(--gold-3);
+  --bubbleBorder-4: var(--blue-1);
+  --bubbleBorder-5: var(--white-1);
   
   // Properties
   background-color: var(--bg)
@@ -511,27 +521,27 @@ body.light {
 
 .bubble span:nth-child(1) {
   inset: 10px;
-  border-left: 15px solid var(--blue-7);
+  border-left: 15px solid var(--bubbleBorder-1);
   filter: blur(10px);
 }
 .bubble span:nth-child(2) {
   inset: 10px;
-  border-right: 15px solid var(--purple-7);
+  border-right: 15px solid var(--bubbleBorder-2);
   filter: blur(14px);
 }
 .bubble span:nth-child(3) {
   inset: 20px;
-  border-top: 15px solid var(--gold-1);
+  border-top: 15px solid var(--bubbleBorder-3);
   filter: blur(10px);
 }
 .bubble span:nth-child(4) {
   inset: 30px;
-  border-left: 15px solid var(--purple-1);
+  border-left: 15px solid var(--bubbleBorder-4);
   filter: blur(12px);
 }
 .bubble span:nth-child(5) {
   inset: 10px;
-  border-bottom: 10px solid var(--white-1);
+  border-bottom: 10px solid var(--bubbleBorder-5);
   filter: blur(8px);
   transform: rotate(300deg);
 }
