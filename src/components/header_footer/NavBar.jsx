@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'react-feather'
-import ThemeSwitch from './ThemeSwitch'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,7 +32,6 @@ const NavBar = () => {
             <Link to="/projects" className="nav-link" onClick={() => setIsOpen(!isOpen)}>
               Projects
             </Link>
-            <ThemeSwitch className="nav-theme-switch"/>
           </div>
           )
         : null
