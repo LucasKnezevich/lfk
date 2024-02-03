@@ -1,10 +1,12 @@
 # LucasKnezevich.com
 
+## About
+A personal site I've used occasionally over the last few years for practice and trying new ideas.  It doesn't have much currently, but there are some links on the `Projects` page.
 
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the `lfk` directory, you can run:
 
 ### `npm start`
 
