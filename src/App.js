@@ -16,14 +16,18 @@ import Projects from './views/Projects'
 function App () {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route exact path='/' element={ <Home /> }/>
-        <Route exact path='/wings' element={ <Wings /> }/>
-        <Route exact path='/wings/signup' element={ <SignUp /> } />
-        <Route exact path='/projects' element={ <Projects /> } />
-      </Routes>
-      <Footer />
+      <div className="layout-container">
+        <div className="header-content-wrapper">
+          <Header />
+          <Routes>
+            <Route exact path='/' element={ <Home /> }/>
+            <Route exact path='/wings' element={ <Wings /> }/>
+            <Route exact path='/wings/signup' element={ <SignUp /> } />
+            <Route exact path='/projects' element={ <Projects /> } />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
   )
 }
