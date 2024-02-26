@@ -4,11 +4,5 @@
     "name": "Snohomish County PUD Transmission Drawings",
     "description": "Web application developed for Snohomish County PUD Engineers and Drafters to locate and update transmission drawing data.",
     "url": "https://snopud-drawings.com/"
-  },
-  {
-    "id": 2,
-    "name": "DataCraftX",
-    "description": "Previously used for a school project, no content currently.",
-    "url": "https://www.datacraftx.com/"
   }
 ]
